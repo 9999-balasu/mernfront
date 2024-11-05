@@ -12,6 +12,7 @@ const PlaceOrder = () => {
  const [formData, setFormData] = useState({
   firstName:'',
   lastName:'',
+   email:'',
   street:'',
   city:'',
   state:'',
@@ -33,7 +34,7 @@ const PlaceOrder = () => {
   let orderItems = []
   for(const items in cartItems){
 for (const item in cartItems[items] ){
-if (cartItems[items][items] > 0){
+if (cartItems[items][item] > 0){
   const itemInfo = structuredClone(products.find(product => product._id === items))
   if(itemInfo){
     itemInfo.size = item
